@@ -1,0 +1,5 @@
+# insert data into the table
+
+INSERT INTO student (student_id, name) VALUES (3, 'Claire');
+
+SELECT * FROM student;
