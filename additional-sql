@@ -1,13 +1,13 @@
 SELECT first_name AS forename, last_name AS surname FROM employee;
-
 SELECT COUNT(emp_id) FROM employee WHERE sex = 'F' AND birth_day > '1971-01-01';
-
 SELECT * FROM employee;
 
 ALTER TABLE employee RENAME COLUMN birth_day TO birth_date;
 
 SELECT DISTINCT sex FROM employee;
-
 SELECT AVG(salary) FROM employee WHERE sex = 'M';
 
 SELECT SUM(salary) FROM employee;
+SELECT COUNT(sex), sex FROM employee GROUP BY sex;
+
+SELECT SUM(total_sales), client_id FROM works_with GROUP BY client_id;
