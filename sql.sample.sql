@@ -1,7 +1,8 @@
-SELECT employee.emp_id, employee.first_name, branch.branch_name
-FROM employee
-LEFT JOIN branch
-ON employee.emp_id = branch.mgr_id;
-
-
-
+DELIMITER $$
+CREATE
+	TRIGGER my_trigger BEFORE INSERT
+    ON employee
+    FOR EACH ROW BEGIN
+		INSERT INTO trigger_test VALUES('added new employee');
+	END$$
+DELIMITER ;
